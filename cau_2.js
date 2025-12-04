@@ -1,0 +1,24 @@
+function cal(n){
+    let sum = 0;
+    for (let i = 1; i < n; i++) {
+        if (n % i === 0) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+function ket_qua(a, b) {
+    if (a <= 0 || b <= 0) {
+        return false;
+    }
+    let sum_a = cal(a);
+    let sum_b = cal(b);
+    let ktra = sum_a === b && sum_b === a;
+    if (ktra) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+console.log(ket_qua(220, 284));
